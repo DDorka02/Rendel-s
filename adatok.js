@@ -8,27 +8,25 @@ export const VIRAG = [
 {
     kep:"kepek/napraforgo.jpg",
     nev:"Napraforgó",
-    elet:2,
+    elet:4,
     szine:"sárga"
 },
 {
     kep:"kepek/Bazsarozsa.jpg",
     nev:"Bazsarózsa",
-    elet:2,
+    elet:3,
     szine:"rózsaszín"
 },
 {
-    kep:"kepek/jacint.jpg",
+    kep:"kepek/Jancint.jpg",
     nev:"Jácint",
-    elet:2,
+    elet:1,
     szine:"lila"
 },
 {
-    kep:"kepek/GYongyvirag.jpg",
+    kep:"kepek/GYogyvirag.jpg",
     nev:"Gyöngyvirág",
-    elet:2,
+    elet:3,
     szine:"fehér"
 }
 ]
-
-console.log(VIRAG)
