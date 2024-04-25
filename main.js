@@ -19,3 +19,15 @@ function szuresNevSzerint(){
         init(szures(VIRAG, szoveg));
     });
 }
+
+function rendezesEsemeny(){
+
+  /* ha rákattintunk a táblázat fejlécében lévő név mezőre */
+  const nevMezoElem = $(".");
+  nevMezoElem.on("click", function(){
+      const lista = rendez(VIRAG, "nev", rIrany);
+      console.log(lista);
+      init(lista);
+      rIrany*=-1;
+  })
+}
