@@ -33,10 +33,88 @@
         </nav>
       </header>
       <article>
-        <div class="urlap"></div>
-        <div class="szuro">
-          <div class="mb-3 mt-3"></div>
+        <h1>Admin</h1>
+        <div class="urlap">
+          <form action="">
+            <label for="cars">Rendezést:</label>
+            <select name="rend" id="rend">
+                <option value="volvo">Név</option>
+                <option value="saab">Élete</option>
+                <option value="saab">Színe</option>
+            </select>
+            <br>
+            <input type="submit" value="Nyomj rá">
+          </form>
+          <div class="szuro">
+            <h3>Szűrés név szerint</h3>
+            <div class="mb-3 mt-3">
+                  <input type="text" class="form-control" id="sznev" name="sznev">
+                </div>
+          <form class="was-validated">
+            <div class="mb-3">
+              <label for="kor" class="form-label">Kép:</label>
+              <input
+              type="text"
+              class="form-control"
+              id="kep"
+              required
+              placeholder="Kép"
+              name="kep"
+              />
+              <div class="valid-feedback">OK.</div>
+              <div class="invalid-feedback">Rakj be egy képet.</div>
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="nev" class="form-label">Neve:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nev"
+                pattern="^[A-Z][a-zA-Z ]{2,}$"
+                required
+                placeholder="Valaki"
+                name="nev"
+              />
+              <div class="valid-feedback">Ok.</div>
+              <div class="invalid-feedback">
+                A név nagy betűvel keződjön, min 3 karakter.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="kor" class="form-label">Kb a hogy meddig él:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="kor"
+                required
+                min="0"
+                max="6"
+                name="kor"
+              />
+              <div class="valid-feedback">OK.</div>
+              <div class="invalid-feedback">0-6 között írhatsz.</div>
+            </div>
+            <div class="mb-3">
+              <label for="kor" class="form-label">Színe:</label>
+              <input
+              type="text"
+              class="form-control"
+              id="szin"
+              pattern="^[A-Z][a-zA-Z ]{2,}$"
+              required
+              placeholder="Zöld"
+              name="szin"
+              />
+              <div class="valid-feedback">OK.</div>
+              <div class="invalid-feedback">Színt írhatsz.</div>
+            </div>
+                
+            <button type="submit" id="submit" class="btn btn-primary">
+              Hozzáad
+            </button>
+          </form>
         </div>
+        
         <div class="adatok"></div>
       </article>
     </main>

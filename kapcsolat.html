@@ -28,7 +28,32 @@
             </nav>
         </header>
         <article>
-           
+          <h1>Kapcsolat</h1>
+          <div class="urlap">
+            <form class="was-validated">
+                <div class="mb-3 mt-3">
+                  <label for="nev" class="form-label">Név:</label>
+                  <input type="text" class="form-control" id="nev" pattern="^[A-Z][a-zA-Z ]{2,}$" required placeholder="Valaki" name="nev">
+                  <div class="valid-feedback">Ok.</div>
+                  <div class="invalid-feedback">A név nagy betűvel keződjön, min 3 karakter.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="kor" class="form-label">Lakcím:</label>
+                  <input type="number" class="form-control" id="kor" required min="0" max="120" name="kor">
+                  <div class="valid-feedback">OK.</div>
+                  <div class="invalid-feedback">Címedet írd le.</div>
+                </div>
+                <div class="form-check mb-3 col-sm-1">
+                  <label class="form-check-label" for="ferfi">Férfi</label>
+                  <input class="form-check-input" type="radio" name="nem" value="ferfi" id="ferfi">
+                </div>
+                <div class="form-check mb-3 col-sm-1">
+                    <label class="form-check-label" for="no">Nő</label>
+                    <input class="form-check-input" type="radio" name="nem" value="no" checked id="no">
+                  </div>
+                <button type="submit"  id="submit" class="btn btn-primary">Hozzáad</button>
+              </form>
+        </div>
         </article>
     </main>
 </body>

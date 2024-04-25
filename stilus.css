@@ -1,9 +1,17 @@
-main{
-    margin: auto;
-    padding: 5px;
+main {
+  margin: 15px;
+  padding: 15px;
+  border: 5px solid black;
+  display: flex;
 }
 
-img{
-    height: 50px;
-    
+header{
+  flex: 0 0 100%;
 }
+.urlap{
+  flex: 0 0 50%;
+}
+.szuro{
+  flex: 0 0 50%;
+}
+
