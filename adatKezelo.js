@@ -5,6 +5,7 @@ export function szures(lista, keresoSzoveg) {
     return szurtLista;
 }
 
+
 export function rendez(lista, kulcs, rIrany) {
     const rlista = lista.sort(function(v1,v2) {
         /* a sort negatív vagy pozitív számot kell, hogy visszaadjon*/

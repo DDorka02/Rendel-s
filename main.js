@@ -3,6 +3,7 @@ import { kartyaLetrehozasa, megjelenit } from "./fuggvenyek.js";
 import { sorBeszur } from "./urlapKezelo.js";
 import { szures } from "./adatKezelo.js";
 
+let rIrany=1;
 init(VIRAG);
 sorBeszur(VIRAG);
 szuresNevSzerint();
@@ -10,6 +11,7 @@ szuresNevSzerint();
 export function init(lista) {
   var txt = kartyaLetrehozasa(lista);
   megjelenit(txt);
+  rendezesEsemeny();
 }
 
 function szuresNevSzerint(){
@@ -23,7 +25,7 @@ function szuresNevSzerint(){
 function rendezesEsemeny(){
 
   /* ha rákattintunk a táblázat fejlécében lévő név mezőre */
-  const nevMezoElem = $(".");
+  const nevMezoElem = $("#rend").eq(0);
   nevMezoElem.on("click", function(){
       const lista = rendez(VIRAG, "nev", rIrany);
       console.log(lista);
