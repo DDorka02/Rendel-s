@@ -13,3 +13,13 @@ export function rendez(lista, kulcs, rIrany) {
     });
     return rlista;
 }
+
+export function kedvencek(lista, index) {
+    lista.push(index,1)
+    return kedvencLista;
+}
+
+export function torol(lista, index) {
+    lista.splice(index,1)
+    return kedvencLista;
+}

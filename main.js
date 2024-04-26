@@ -1,7 +1,7 @@
 import { VIRAG } from "./adatok.js";
-import { kartyaLetrehozasa, megjelenit } from "./fuggvenyek.js";
+import { kartyaLetrehozasa, megjelenit,  } from "./fuggvenyek.js";
 import { sorBeszur } from "./urlapKezelo.js";
-import { szures } from "./adatKezelo.js";
+import { szures, rendez, kedvencek, torol } from "./adatKezelo.js";
 
 let rIrany=1;
 init(VIRAG);
@@ -23,11 +23,14 @@ function szuresNevSzerint(){
 }
 
 function rendezesEsemeny(){
-  const nevMezoElem = $("#rend").eq(0);
-  nevMezoElem.on("click", function(){
-      const lista = rendez(VIRAG, "nev", rIrany);
+  const nevMezoElem = $("#rend");
+  nevMezoElem.on("change", function(){
+    console.log(nevMezoElem.val())
+      const lista = rendez(VIRAG, nevMezoElem.val(), rIrany);
       console.log(lista);
       init(lista);
       rIrany*=-1;
   })
 }
+
+
