@@ -23,8 +23,6 @@ function szuresNevSzerint(){
 }
 
 function rendezesEsemeny(){
-
-  /* ha rákattintunk a táblázat fejlécében lévő név mezőre */
   const nevMezoElem = $("#rend").eq(0);
   nevMezoElem.on("click", function(){
       const lista = rendez(VIRAG, "nev", rIrany);
