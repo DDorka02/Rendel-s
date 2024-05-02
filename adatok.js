@@ -3,30 +3,35 @@ export const VIRAG = [
     kep:"kepek/tulipan.png",
     nev:"Tulipán",
     elet:2,
+    kedvenc:false,
     szine:"piros"
 },
 {
     kep:"kepek/napraforgo.jpg",
     nev:"Napraforgó",
     elet:4,
+    kedvenc:false,
     szine:"sárga"
 },
 {
     kep:"kepek/Bazsarozsa.jpg",
     nev:"Bazsarózsa",
     elet:3,
+    kedvenc:false,
     szine:"rózsaszín"
 },
 {
     kep:"kepek/Jancint.jpg",
     nev:"Jácint",
     elet:1,
+    kedvenc:false,
     szine:"lila"
 },
 {
     kep:"kepek/GYogyvirag.jpg",
     nev:"Gyöngyvirág",
     elet:3,
+    kedvenc:false,
     szine:"fehér"
 }
 ]
