@@ -14,7 +14,7 @@ export function rendez(lista, kulcs, rIrany) {
 }
 
 export function kedvencek(lista, index) {
-    lista.push(index,1)
+    lista.push(index)
     return kedvencLista;
 }
 

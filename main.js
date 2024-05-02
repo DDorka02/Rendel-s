@@ -6,11 +6,13 @@ import {
 import { sorBeszur } from "./urlapKezelo.js";
 import { szures, rendez, kedvencek, torol } from "./adatKezelo.js";
 
+const kedvenceLISTA = []
 let rIrany = 1;
 init(VIRAG);
 szuresNevSzerint();
 kedvencekesemeny();
 sorBeszur(VIRAG);
+Kedvenceklistazasa();
 
 export function init(lista) {
   var txt = kartyaLetrehozasa(lista);
@@ -40,22 +42,22 @@ function rendezesEsemeny() {
 function kedvencekesemeny(lista) {
   const kedvencELEM = $(".sziv")
         kedvencELEM.on("click", function (event) {
-            let txt= ""
-            txt += "<p>❤️</p>"
-            let index = event.target.id;
-            const LISTA= kedvencek(VIRAG,index)
-            init(LISTA)
+          let index = event.target.id;
+            const hozzaad = $(".card-footer").eq(index)
+            hozzaad.append("<p>❤️</p>") 
+            const LISTA= kedvencek(kedvenceLISTA,lista[index])
+           // init(LISTA)
         })
-
 /* aKKOR FUT LE, HA RÁKATTINTUNK A KÁRTYÁK ALJÁN LÉVŐ KEDVENCEKHEZ AD GOMBRA */
 //aKKOR A KÁRTYÁBAN MEGJELENIK EGY SZIVECSKE
 // ÉS AZ ADOTT KÁRTYA ÁTKERÜL A KEDVENCEK LISTÁBA
-
 }
 
 function Kedvenceklistazasa(){
   //Kedvencek mutatása 1db, ha erre kattintunk, akkor kilistázza a kedvencekLista tartalámt. 
-
-/* var txt = kartyaLetrehozasa(lista);
-  megjelenit(txt); */
+  const GOMB = $(".kedv")
+  GOMB.on("click", function () {
+    init(kedvenceLISTA)
+    
+  })
 }

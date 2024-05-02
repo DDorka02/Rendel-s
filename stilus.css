@@ -1,9 +1,14 @@
+body{
+  background-color: red;
+  padding: 5px;
+}
+
 main {
   margin: 15px;
   padding: 15px;
   border: 1px solid black;
   border-radius: 10px;
-
+  background-color: white;
 
 }
 
@@ -14,9 +19,10 @@ nav{
 
 }
 article{
-  border: 2px solid green;
+  border: 2px solid blue;
   padding: 5px;
   border-radius: 10px;
+  background-color: rgb(119, 219, 128);
 
 }
 
