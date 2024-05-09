@@ -15,7 +15,6 @@
   </head>
   <body>
     <main class="container-fluid">
-      <header>
         <nav class="col-md-12 bg-light">
           <ul class="nav">
             <li class="nav-item">
@@ -29,7 +28,6 @@
             </li>
           </ul>
         </nav>
-      </header>
       <article>
         <h1>Admin</h1>
         <div class="urlap">
@@ -39,11 +37,17 @@
             <option value="nev">Név sorban</option>
             <option value="kor">Élet szerint</option>
           </select>
+        </div>
           <div class="szuro">
             <h3>Szűrés név szerint</h3>
             <div class="mb-3 mt-3">
                   <input type="text" class="form-control" id="sznev" name="sznev">
                 </div>
+                <h3>Szűrés szín szerint</h3>
+            <div class="mb-3 mt-3">
+              <input type="text" class="form-control" id="szin" name="szin" />
+            </div>
+            </div>
           <form class="was-validated">
             <div class="mb-3">
               <label for="avatar">Kép választása:</label>

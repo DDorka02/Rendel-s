@@ -13,9 +13,9 @@ export function rendez(lista, kulcs, rIrany) {
     return rlista;
 }
 
-export function kedvencek(lista, index) {
-    lista.push(index)
-    return kedvencLista;
+export function kedvencek(lista, kartya) {
+    lista.push(kartya)
+    return lista;
 }
 
 export function torol(lista, index) {

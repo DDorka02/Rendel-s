@@ -10,7 +10,7 @@ const kedvenceLISTA = []
 let rIrany = 1;
 init(VIRAG);
 szuresNevSzerint();
-kedvencekesemeny();
+kedvencekesemeny(VIRAG)
 sorBeszur(VIRAG);
 Kedvenceklistazasa();
 
@@ -44,9 +44,11 @@ function kedvencekesemeny(lista) {
         kedvencELEM.on("click", function (event) {
           let index = event.target.id;
             const hozzaad = $(".card-footer").eq(index)
-            hozzaad.append("<p>❤️</p>") 
+            //hozzaad.append("<p>❤️</p>") 
+            console.log(lista)
+            lista[index].kedvenc=true
             const LISTA= kedvencek(kedvenceLISTA,lista[index])
-           // init(LISTA)
+            init(lista)
         })
 /* aKKOR FUT LE, HA RÁKATTINTUNK A KÁRTYÁK ALJÁN LÉVŐ KEDVENCEKHEZ AD GOMBRA */
 //aKKOR A KÁRTYÁBAN MEGJELENIK EGY SZIVECSKE

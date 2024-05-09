@@ -1,46 +1,98 @@
-body{
+* {
+  box-sizing: border-box;
+}
+
+body {
   background-color: red;
   padding: 5px;
 }
 
 main {
-  margin: 15px;
+  margin: auto;
   padding: 15px;
   border: 1px solid black;
   border-radius: 10px;
   background-color: white;
-
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
 }
 
-nav{
+
+nav {
   border: 2px solid red;
   border-radius: 10px;
   margin: 5px;
-
+  grid-area: n;
 }
-article{
+article {
+  flex: 0 0 100%;
   border: 2px solid blue;
   padding: 5px;
   border-radius: 10px;
   background-color: rgb(119, 219, 128);
-
+  grid-area: a;
+  display: grid;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
-.adatok{
+.adatok {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  flex: 0 0 25%;
+  margin: 5px;
+  grid-area: card;
+}
+
+.img-thumbnail {
+  height: 100px;
+  width: 100px;
+}
+
+.urlap {
   display: flex;
   flex-wrap: wrap;
 }
 
-.card{
+#rend {
   flex: 0 0 25%;
-  margin:5px;
+  margin: 5px;
+  grid-area: re;
 }
 
-.img-thumbnail{
-  height: 100px;
-  width: 100px;
+#sznev{
+  grid-area: sz;
+}
+
+#szin{
+  grid-area: szin;
+}
+
+.kedv {
+  flex: 0 0 25%;
+}
+
+@media screen and (max-width:550px){
+  main{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "n"
+                         "a";
+  }
+  article{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "re"
+                         "sz"
+                         "szin"
+                         "card";
+  }
+
 }
