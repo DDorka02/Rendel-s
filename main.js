@@ -4,12 +4,13 @@ import {
   megjelenit,
 } from "./fuggvenyek.js";
 import { sorBeszur } from "./urlapKezelo.js";
-import { szures, rendez, kedvencek, torol } from "./adatKezelo.js";
+import { szures, szinszures, rendez, kedvencek, torol } from "./adatKezelo.js";
 
 const kedvenceLISTA = []
 let rIrany = 1;
 init(VIRAG);
 szuresNevSzerint();
+szuresSzinSzerint();
 kedvencekesemeny(VIRAG)
 sorBeszur(VIRAG);
 Kedvenceklistazasa();
@@ -25,6 +26,14 @@ function szuresNevSzerint() {
   szuroElem.on("keyup", function () {
     let szoveg = szuroElem.val();
     init(szures(VIRAG, szoveg));
+  });
+}
+
+function szuresSzinSzerint() {
+  const szuroElem = $("#szin");
+  szuroElem.on("keyup", function () {
+    let szoveg = szuroElem.val();
+    init(szinszures(VIRAG, szoveg));
   });
 }
 
