@@ -15,7 +15,9 @@ main {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  grid-area: m;
   display: grid;
+  gap:20px;
 }
 
 
@@ -33,6 +35,7 @@ article {
   background-color: rgb(119, 219, 128);
   grid-area: a;
   display: grid;
+  gap:20px;
 }
 
 h1 {
@@ -79,16 +82,16 @@ h1 {
   flex: 0 0 25%;
 }
 
-@media screen and (max-width:550px){
+@media screen and (max-width:600px){
   main{
     display: grid;
-    gap: 10px;
+    gap:20px;
     grid-template-areas: "n"
                          "a";
   }
   article{
     display: grid;
-    gap: 10px;
+    gap:20px;
     grid-template-areas: "re"
                          "sz"
                          "szin"
