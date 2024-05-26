@@ -30,7 +30,7 @@ function szuresNevSzerint() {
 }
 
 function szuresSzinSzerint() {
-  const szuroElem = $("#szin");
+  const szuroElem = $("#szszin");
   szuroElem.on("keyup", function () {
     let szoveg = szuroElem.val();
     init(szinszures(VIRAG, szoveg));
