@@ -18,6 +18,8 @@ main {
   grid-area: m;
   display: grid;
   gap:20px;
+    grid-template-areas: "n"
+                         "a";
 }
 
 
@@ -36,6 +38,10 @@ article {
   grid-area: a;
   display: grid;
   gap:20px;
+    grid-template-areas: "re"
+                         "sz"
+                         "szin"
+                         "card"
 }
 
 h1 {
@@ -85,13 +91,13 @@ h1 {
 @media screen and (max-width:600px){
   main{
     display: grid;
-    gap:20px;
+    grid-template-columns: 1fr;
     grid-template-areas: "n"
                          "a";
   }
   article{
     display: grid;
-    gap:20px;
+    grid-template-columns: 1fr;
     grid-template-areas: "re"
                          "sz"
                          "szin"
